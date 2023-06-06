@@ -48,3 +48,12 @@ COPY --from=build /app .
 HEALTHCHECK CMD wget -qO- -t1 http://localhost:80/healthz || exit 1
 ENTRYPOINT ["./aspnetapp"]
 ```
+How to determine if .NET Core is installed
+- netcore sdk
+```
+dotnet --version
+```
+- netcore runtime
+```
+dotnet --info
+```
