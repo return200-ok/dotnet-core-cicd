@@ -1,6 +1,5 @@
-# dotnet-core-cicd
 
-## Dockerize dotnet core
+# Dockerize dotnet core
 
 The .NET Docker images have been updated for this release. The .NET Docker samples show various ways to use .NET and Docker together.
 
@@ -16,12 +15,12 @@ Different between `runtime` and `SDK`
 
 > SDK (Runtime + Tooling): to build and run apps
 
-## Build & Publish 
+# Build & Publish 
 - dotnet build - Builds a project and all of its dependencies.
 
 - dotnet publish - Packs the application and its dependencies into a folder for deployment to a hosting system. (PS - this also builds the application before packing)
 
-## Dockerfile
+# Dockerfile
 ```
 # Learn about building .NET container images:
 # https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md
