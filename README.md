@@ -70,3 +70,23 @@ Target framework | Latest stable version | Target framework moniker (TFM) | Impl
 .NET Core |3.1 |netcoreapp3.1 |2.1
 .NET Framework |4.8 |net48 |2.0
 
+# Switch a .net framework project to a .netcore
+open the csproj file and change the TargetFramework from something like this
+```
+<TargetFramework>net462</TargetFramework>
+```
+to something like this
+```
+<TargetFramework>netcoreapp3.1</TargetFramework>
+```
+You could also change it to .net standard, in case you want compatibility between .net core and .net framework consumer projects, by changing it to this:
+```
+<TargetFramework>netstandard2.0</TargetFramework>
+```
+You could target multiple frameworks like so:
+```
+<TargetFrameworks>net462;netstandard2.0</TargetFrameworks> 
+```
+Ensure you use the correct version number and obviously depending on what this project already targets, things are going to break and will need fixing. For example, you can't use a .net framework class library with a .net core project.
+
+A more detailed process is provided here: https://learn.microsoft.com/en-us/dotnet/core/porting/
