@@ -51,9 +51,22 @@ ENTRYPOINT ["./aspnetapp"]
 How to determine if .NET Core is installed
 - netcore sdk
 ```
-dotnet --version
+dotnet --version        Display .NET SDK version in use.
+dotnet --list-sdks       Display the installed SDKs.
 ```
 - netcore runtime
 ```
-dotnet --info
+dotnet --info       Display .NET information.
+dotnet --list-runtimes   Display the installed runtimes.
 ```
+# Target frameworks in SDK-style projects
+Target framework | Latest stable version | Target framework moniker (TFM) | Implemented .NET Standard version 
+--- | --- | --- | --- 
+--- | --- | --- | --- 
+.NET |7 |7 	|net7.0 |2.1
+.NET |6 |6 |net6.0 |2.1
+.NET |5 |5 |net5.0 |2.1
+.NET Standard |2.1 |netstandard2.1 |N/A
+.NET Core |3.1 |netcoreapp3.1 |2.1
+.NET Framework |4.8 |net48 |2.0
+
