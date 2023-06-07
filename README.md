@@ -71,7 +71,7 @@ Target framework | Latest stable version | Target framework moniker (TFM) | Impl
 .NET Framework |4.8 |net48 |2.0
 
 # Switch a .net framework project to a .netcore
-open the csproj file and change the TargetFramework from something like this
+open the `csproj` file and change the TargetFramework from something like this
 ```
 <TargetFramework>net462</TargetFramework>
 ```
