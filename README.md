@@ -89,3 +89,23 @@ You could target multiple frameworks like so:
 Ensure you use the correct version number and obviously depending on what this project already targets, things are going to break and will need fixing. For example, you can't use a .net framework class library with a .net core project.
 
 A more detailed process is provided here: https://learn.microsoft.com/en-us/dotnet/core/porting/
+
+# Using proxy in Nuget.config file
+In Windows 7 and 10, this file is in the path:
+C:\Users\YouUser\AppData\Roaming\NuGet.
+
+Include the setting:
+```
+<config>
+  <add key = "http_proxy" value = "http://Youproxy:8080" />
+  <add key = "http_proxy.user" value = "YouProxyUser" />
+</config>
+```
+verify 'file' to get current entries:
+```
+dotnet nuget list source
+```
+add new source:
+```
+dotnet nuget add source https://nuget.example.com -n SomeName
+```
